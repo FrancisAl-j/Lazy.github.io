@@ -1,0 +1,104 @@
+:root {
+    --bg-color: #DBD8E3;
+    --header: #352F44;
+    --text-color: #DBD8E3;
+    --secondary: #5C5470;
+    --font:  Arial, Helvetica, sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+.wrapper {
+    background: var(--bg-color);
+    height: auto;
+    width: 100%;
+}
+header {
+    height: 75px;
+    background: var(--header);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+    top: 0;
+    color: var(--text-color);
+}
+header .logo {
+    font-size: clamp(1.6rem, 10vw, 3rem);
+    font-weight: bold;
+}
+.soc-med i {
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    margin: 0 12px;
+}
+.soc-med i:first-child, .soc-med i:nth-child(2), .soc-med i:last-child {
+    cursor: pointer;
+}
+.soc-med i:first-child:hover {
+    color: #1877F2;
+}
+.soc-med i:nth-child(2):hover {
+    color: #000;
+}
+.soc-med i:last-child:hover {
+    color: #000;
+}
+main {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    height: 90vh;
+}
+.container {
+    background: var(--secondary);
+    width: min(100% - 20px, 600px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    gap: 20px;
+}
+.container img {
+    width: min(80vw, 200px);
+    object-fit: fill;
+}
+.container h1 {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    color: var(--text-color);
+}
+.container p {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+button {
+    text-transform: capitalize;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    background: rgb(6, 138, 6);
+    color: #fff;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+}
+button:hover {
+    background: rgb(2, 39, 2);
+}
+
+
+@media screen and (max-width: 700px) {
+    header {
+        flex-direction: column;
+        height: 80px;
+    }
+    .soc-med {
+        padding-bottom: 12px;
+    }
+}
